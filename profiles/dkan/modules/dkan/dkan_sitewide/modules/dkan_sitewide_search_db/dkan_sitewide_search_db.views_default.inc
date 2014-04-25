@@ -22,6 +22,7 @@ function dkan_sitewide_search_db_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Datasets';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -83,9 +84,10 @@ function dkan_sitewide_search_db_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'dataset';
+  $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Datasets';
   $handler->display->display_options['menu']['description'] = 'A list of datasets offered on the site.';
-  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['weight'] = '-55';
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
