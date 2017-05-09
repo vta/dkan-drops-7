@@ -421,7 +421,8 @@ function dkan_delete_markdown_buttons(array &$context) {
  */
 function dkan_group_link_delete(array &$context) {
   $context['message'] = t('Removing og_extra groups link');
-  db_query('DELETE FROM {menu_links} WHERE link_path = :link_path LIMIT 1', array(':link_path' => 'groups'));
+//  @todo Fix Me - Throws a PDO Exception when using PostgreSQL 9.3+
+//  db_query('DELETE FROM {menu_links} WHERE link_path = :link_path LIMIT 1', array(':link_path' => 'groups'));
 }
 
 /**
