@@ -100,7 +100,6 @@ function panopoly_widgets_page_build(&$page) {
 
   // Add our custom javascript to the footer to override other things.
   drupal_add_js(drupal_get_path('module', 'panopoly_widgets') . '/panopoly-widgets.js', array('scope' => 'footer'));
-  drupal_add_library('system', 'ui.tabs');
   drupal_add_js(drupal_get_path('module', 'panopoly_widgets') . '/panopoly-widgets-spotlight.js', array('scope' => 'footer'));
 }
     
@@ -487,6 +486,25 @@ function panopoly_widgets_fieldable_panels_pane_view($entity, $view_mode, $langc
       );
     }
   }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function panopoly_widgets_form_fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form_alter(&$form, &$form_state) {
+  if (isset($form['widget_settings']['link'])) {
+    // For when panopoly_magic is enabled.
+    $element =& $form['widget_settings']['link'];
+  }
+  else {
+    $element =& $form['link'];
+  }
+
+  $element['path']['#linkit'] = array(
+    'enable' => TRUE,
+    'profile' => 'content_fields',
+    'button_text' => t('Search for existing content'),
+  );
 }
 
 /**

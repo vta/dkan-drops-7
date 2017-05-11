@@ -1,0 +1,26 @@
+#welcome_panel h2.pane-title {
+	text-shadow: 2px 2px darkblue;
+	font-weight: bold;
+}
+
+#welcome_panel .pane-content .field-type-text-with-summary {
+/**
+    rgba(61,180,229,.5);  vta light blue
+    rgba(0,74,152,.5);    vta dark blue
+**/
+  background-color: rgba(0,74,152,.7);
+  padding: 14px;
+  border-radius: 12px;
+}
+
+#welcome_panel .pane-content a ,
+#recent_datasets .pane-content a {
+	font-weight: bold;
+	font-color: darkblue;
+}
+
+#recent_datasets .pane-content {
+  background-color:rgba(61,180,229,.7);
+  padding: 14px;
+  border-radius: 14px;
+}
