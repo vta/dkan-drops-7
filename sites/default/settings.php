@@ -313,7 +313,7 @@ $drupal_hash_salt = 'd3EbftC5aSggbukVWBXRMLGa0VfdivxUk9OFYfe39tU';
  * for you.
  */
 # $base_url = 'http://www.example.com';  // NO trailing slash!
-
+$base_url = 'http://opendata.vta.org';
 /**
  * PHP settings:
  *
@@ -370,6 +370,7 @@ ini_set('session.cookie_lifetime', 2000000);
  * with a leading dot, as per RFC 2109.
  */
 # $cookie_domain = '.example.com';
+$cookie_domain = 'opendata.vta.org';
 
 /**
  * Variable overrides:
