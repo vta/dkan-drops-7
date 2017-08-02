@@ -37,6 +37,10 @@ DirectoryIndex index.php index.html index.htm
   php_value mbstring.http_input             pass
   php_value mbstring.http_output            pass
   php_flag mbstring.encoding_translation    off
+  php_flag display_errors	on
+  php_flag html_errors	on
+  php_flag log_errors	on
+  php_value error_log "/home/opendata/SCVTA/dkan-drops-7/php_error.log"
 </IfModule>
 
 # Requires mod_expires to be enabled.
@@ -116,6 +120,7 @@ DirectoryIndex index.php index.html index.htm
 
   # Pass all requests not referring directly to files in the filesystem to
   # index.php. Clean URLs are handled in drupal_environment_initialize().
+  RewriteCond %{REQUEST_URI} !=/server-status	
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !=/favicon.ico
