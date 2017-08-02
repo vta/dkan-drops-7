@@ -66,9 +66,6 @@
           options = getElementOptions(this);
           $(this).chosen(options);
         });
-
-        //Add data aria for input with choosen widget. This line is for accesibility.
-        $('.chosen-choices .search-field input, .chosen-search input').attr('aria-label', 'Choose some options');
     }
   };
 })(jQuery);

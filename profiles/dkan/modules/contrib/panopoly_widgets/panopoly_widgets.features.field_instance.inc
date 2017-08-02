@@ -40,20 +40,6 @@ function panopoly_widgets_field_default_field_instances() {
       'active' => 1,
       'module' => 'file',
       'settings' => array(
-        'filefield_sources' => array(
-          'filefield_sources' => array(),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 0,
-          ),
-        ),
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
@@ -201,20 +187,6 @@ function panopoly_widgets_field_default_field_instances() {
         'manualcrop_styles_list' => array(
           'panopoly_image_full' => 'panopoly_image_full',
         ),
-        'filefield_sources' => array(
-          'filefield_sources' => array(),
-          'source_attach' => array(
-            'absolute' => 0,
-            'attach_mode' => 'move',
-            'path' => 'file_attach',
-          ),
-          'source_imce' => array(
-            'imce_mode' => 0,
-          ),
-          'source_reference' => array(
-            'autocomplete' => 0,
-          ),
-        ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
       ),
@@ -300,7 +272,6 @@ function panopoly_widgets_field_default_field_instances() {
           'langcode' => 'en',
           'link_text' => 'View larger map',
           'map_type' => 'm',
-          'static_scale' => 1,
           'zoom_level' => 14,
         ),
         'type' => 'simple_gmap',
@@ -516,9 +487,7 @@ function panopoly_widgets_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'apply_chosen' => 0,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 1,
     ),

@@ -1,0 +1,16 @@
+// @file
+// SASS partials import
+// -----------------------------------------------------------------------------
+
+// VTA Open Data global partials.
+// -----------------------------------------------------------------------------
+@import "base/variables";
+@import "base/mixins";
+@import "base/helpers";
+
+
+// VTA Open Data partials
+// --------------------------------------------------
+@import "base/typography";
+@import "layout/**/*";
+@import "components/**/*";
